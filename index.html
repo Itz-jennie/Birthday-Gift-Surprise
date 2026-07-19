@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Gift Wrapped in Sakura 🌸</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loading">
+
+<div class="loading-content">
+
+<div class="flower">
+🌸
+</div>
+
+<h1>A Gift Wrapped in Sakura</h1>
+
+<p>Loading a little magic...</p>
+
+</div>
+
+</div>
+
+<!-- Floating Background -->
+
+<div id="petals"></div>
+
+<div id="sparkles"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<!-- Music -->
+
+<audio id="bgMusic" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="glass-card">
+
+<p class="small-text">
+
+🎐 Best experienced with sound on
+
+</p>
+
+<h1>
+
+Someone left a little gift for you...
+
+</h1>
+
+<p class="subtitle">
+
+Some gifts aren't meant to be opened all at once.
+
+</p>
+
+<button id="startBtn">
+
+🎀 Open Your Gift
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Gift Wrapper -->
+
+<section id="giftWrap" class="hidden">
+
+<div class="gift-wrapper">
+
+<div class="gift-cloth">
+
+<div class="ribbon-horizontal"></div>
+
+<div class="ribbon-vertical"></div>
+
+<div class="bow">
+
+🎀
+
+</div>
+
+</div>
+
+<h2>
+
+Tap the ribbon...
+
+</h2>
+
+</div>
+
+</section>
+
+<!-- Envelope -->
+
+<section id="envelopeSection" class="hidden">
+
+<div class="envelope">
+
+<div class="envelope-top"></div>
+
+<div class="letter">
+
+<h2>
+
+For Kaku 🤍
+
+</h2>
+
+<p id="typedText"></p>
+
+</div>
+
+</div>
+
+  </section>
+  <!-- ================= GIFTS ================= -->
+
+<section id="giftSection" class="hidden">
+
+<h1>
+🎁 Three Little Gifts
+</h1>
+
+<p class="sectionText">
+Each one hides a little surprise...
+</p>
+
+<div class="giftContainer">
+
+<div class="giftBox" id="gift1">
+
+<div class="giftLid"></div>
+
+<div class="giftBody"></div>
+
+<span>🤍</span>
+
+</div>
+
+<div class="giftBox" id="gift2">
+
+<div class="giftLid"></div>
+
+<div class="giftBody"></div>
+
+<span>🌸</span>
+
+</div>
+
+<div class="giftBox" id="gift3">
+
+<div class="giftLid"></div>
+
+<div class="giftBody"></div>
+
+<span>✨</span>
+
+</div>
+
+</div>
+
+<div id="giftContent" class="hidden">
+
+<h2 id="giftTitle"></h2>
+
+<p id="giftMessage"></p>
+
+</div>
+
+</section>
+
+<!-- ================= CD ================= -->
+
+<section id="cdSection" class="hidden">
+
+<h1>
+
+💿 思い出 MIX
+
+</h1>
+
+<p class="sectionText">
+
+A playlist made just for you.
+
+</p>
+
+<div class="cd-player">
+
+<div class="cd">
+
+<div class="center-hole"></div>
+
+</div>
+
+</div>
+
+<div class="trackList">
+
+<h3>Track List</h3>
+
+<ol>
+
+<li>Song 01</li>
+
+<li>Song 02</li>
+
+<li>Song 03</li>
+
+<li>Song 04</li>
+
+<li>Song 05</li>
+
+<li>Song 06</li>
+
+<li>Song 07</li>
+
+<li>Song 08</li>
+
+</ol>
+
+</div>
+
+<a
+class="spotifyButton"
+href="YOUR_SPOTIFY_PLAYLIST"
+target="_blank">
+
+🎵 Open Playlist
+
+</a>
+
+</section>
+
+<!-- ================= JAPANESE GARDEN ================= -->
+
+<section id="gardenSection" class="hidden">
+
+<div class="gardenCard">
+
+<div class="lantern">🏮</div>
+
+<div class="crane">🕊️</div>
+
+<div class="windchime">🎐</div>
+
+<h1>
+
+🌸
+
+</h1>
+
+<p>
+
+Maybe one day...
+
+we'll walk beneath the sakura trees together.
+
+</p>
+
+</div>
+
+</section>
+<!-- ================= FINAL SECTION ================= -->
+
+<section id="finalSection" class="hidden">
+
+<div class="finalCard">
+
+<h1>
+
+お誕生日おめでとう
+
+</h1>
+
+<h2>
+
+Happy Birthday,
+Kaku 🤍
+
+</h2>
+
+<p>
+
+I hope today brings you
+lots of happiness,
+countless smiles,
+and memories you'll treasure forever.
+
+Thank you for being you.
+
+I hope this little gift
+made you smile.
+
+🌸🤍
+
+</p>
+
+<button id="lastButton">
+
+🌸 One Last Thing...
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= SECRET ENDING ================= -->
+
+<section id="secretSection" class="hidden">
+
+<div class="secretCard">
+
+<h1>
+
+🌸
+
+</h1>
+
+<h2>
+
+One Last Wish
+
+</h2>
+
+<p>
+
+Maybe one day...
+
+we'll walk beneath
+the sakura trees together.
+
+Until then,
+
+I hope every birthday
+brings you one step closer
+to every dream you have.
+
+Thank you
+for existing.
+
+🤍
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DECORATIONS ================= -->
+
+<div id="confettiContainer"></div>
+
+<div id="floatingHearts"></div>
+
+<div id="lanternGlow"></div>
+
+<div id="stars"></div>
+
+<div id="cursorSparkles"></div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+Made with 🤍, sakura petals,
+and lots of love.
+
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
