@@ -1,0 +1,1251 @@
+/* ==========================
+RESET
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Quicksand',sans-serif;
+
+background:linear-gradient(
+180deg,
+#ffffff 0%,
+#fff7fb 40%,
+#ffeef6 75%,
+#ffffff 100%);
+
+overflow-x:hidden;
+
+color:#555;
+
+}
+
+/* ==========================
+LOADING SCREEN
+========================== */
+
+#loading{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+.loading-content{
+
+text-align:center;
+
+}
+
+.loading-content h1{
+
+font-family:'Dancing Script',cursive;
+
+font-size:58px;
+
+color:#ff91b8;
+
+margin-top:20px;
+
+}
+
+.loading-content p{
+
+margin-top:15px;
+
+font-size:18px;
+
+color:#777;
+
+}
+
+.flower{
+
+font-size:70px;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+#petals,
+#sparkles,
+#floatingHearts,
+#cursorSparkles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+.cloud{
+
+position:fixed;
+
+background:white;
+
+opacity:.75;
+
+border-radius:100px;
+
+filter:blur(3px);
+
+z-index:0;
+
+}
+
+.cloud::before,
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+background:white;
+
+border-radius:100px;
+
+}
+
+.cloud1{
+
+width:180px;
+height:60px;
+
+top:70px;
+
+left:-220px;
+
+animation:cloudMove 55s linear infinite;
+
+}
+
+.cloud1::before{
+
+width:80px;
+height:80px;
+
+left:18px;
+
+top:-28px;
+
+}
+
+.cloud1::after{
+
+width:90px;
+height:90px;
+
+right:20px;
+
+top:-35px;
+
+}
+
+.cloud2{
+
+width:250px;
+
+height:70px;
+
+top:180px;
+
+left:-300px;
+
+animation:cloudMove 70s linear infinite;
+
+animation-delay:8s;
+
+}
+
+.cloud3{
+
+width:160px;
+
+height:55px;
+
+top:320px;
+
+left:-200px;
+
+animation:cloudMove 60s linear infinite;
+
+animation-delay:18s;
+
+}
+
+/* ==========================
+SECTIONS
+========================== */
+
+section{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px 25px;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* ==========================
+GLASS CARD
+========================== */
+
+.glass-card{
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(16px);
+
+padding:45px;
+
+border-radius:35px;
+
+width:90%;
+
+max-width:700px;
+
+text-align:center;
+
+box-shadow:
+
+0 20px 45px rgba(255,180,210,.25);
+
+}
+
+.glass-card h1{
+
+font-family:'Dancing Script';
+
+font-size:60px;
+
+color:#ff8db4;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-top:15px;
+
+}
+
+.small-text{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#999;
+
+margin-bottom:20px;
+
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+button{
+
+padding:18px 42px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(
+135deg,
+#ffd8e8,
+#ffffff);
+
+font-size:18px;
+
+margin-top:35px;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 30px rgba(255,170,200,.35);
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-6px)
+
+scale(1.05);
+
+  }
+/* ==========================
+FUROSHIKI GIFT
+========================== */
+
+.gift-wrapper{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
+
+}
+
+.gift-cloth{
+
+width:260px;
+height:260px;
+
+background:linear-gradient(
+135deg,
+#ffffff,
+#ffeaf3);
+
+border-radius:25px;
+
+position:relative;
+
+box-shadow:
+0 20px 40px rgba(255,180,210,.25);
+
+transition:.5s;
+
+}
+
+.gift-cloth:hover{
+
+transform:
+scale(1.05)
+rotate(-2deg);
+
+}
+
+.ribbon-horizontal{
+
+position:absolute;
+
+width:100%;
+height:22px;
+
+background:#ffb6cf;
+
+top:50%;
+transform:translateY(-50%);
+
+}
+
+.ribbon-vertical{
+
+position:absolute;
+
+height:100%;
+width:22px;
+
+background:#ffb6cf;
+
+left:50%;
+transform:translateX(-50%);
+
+}
+
+.bow{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:55px;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+/* ==========================
+ENVELOPE
+========================== */
+
+.envelope{
+
+position:relative;
+
+width:340px;
+height:220px;
+
+background:#fff7fa;
+
+border-radius:16px;
+
+box-shadow:
+0 18px 40px rgba(255,180,210,.25);
+
+overflow:hidden;
+
+}
+
+.envelope-top{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:120px;
+
+background:#ffdce9;
+
+clip-path:polygon(0 0,100% 0,50% 100%);
+
+transform-origin:top;
+
+transition:.8s;
+
+}
+
+.letter{
+
+position:absolute;
+
+left:20px;
+right:20px;
+bottom:20px;
+
+height:170px;
+
+background:white;
+
+border-radius:15px;
+
+padding:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+font-family:'Patrick Hand',cursive;
+
+line-height:1.8;
+
+overflow:auto;
+
+}
+
+.letter h2{
+
+font-family:'Dancing Script';
+
+font-size:38px;
+
+color:#ff8db4;
+
+margin-bottom:12px;
+
+}
+
+/* ==========================
+GIFTS
+========================== */
+
+.giftContainer{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:35px;
+
+margin-top:45px;
+
+}
+
+.giftBox{
+
+position:relative;
+
+width:130px;
+height:130px;
+
+cursor:pointer;
+
+transition:.35s;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+.giftBox:hover{
+
+transform:
+translateY(-10px)
+scale(1.08);
+
+}
+
+.giftBody{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+height:95px;
+
+background:linear-gradient(
+135deg,
+#ffe6f0,
+#ffffff);
+
+border-radius:12px;
+
+box-shadow:
+0 12px 25px rgba(255,180,210,.25);
+
+}
+
+.giftLid{
+
+position:absolute;
+
+top:10px;
+
+width:100%;
+height:30px;
+
+background:#ffc0d8;
+
+border-radius:10px;
+
+z-index:2;
+
+}
+
+.giftBox span{
+
+position:absolute;
+
+top:40%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:38px;
+
+z-index:3;
+
+}
+
+#giftContent{
+
+margin-top:50px;
+
+max-width:650px;
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(12px);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+0 15px 30px rgba(255,180,210,.2);
+
+}
+
+#giftTitle{
+
+font-family:'Dancing Script';
+
+font-size:42px;
+
+color:#ff8db4;
+
+margin-bottom:15px;
+
+}
+
+#giftMessage{
+
+font-size:20px;
+
+line-height:1.9;
+
+  }
+/* ==========================
+CD PLAYER
+========================== */
+
+.cd-player{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+margin:40px 0;
+
+}
+
+.cd{
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+position:relative;
+
+background:
+radial-gradient(circle,
+#ffffff 0%,
+#f8f8f8 20%,
+#ffe6f0 40%,
+#ffffff 60%,
+#f5f5f5 80%,
+#ffffff 100%);
+
+box-shadow:
+0 0 35px rgba(255,180,210,.35);
+
+animation:spin 12s linear infinite;
+
+overflow:hidden;
+
+}
+
+.cd::before{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+background:white;
+
+border:8px solid #e8e8e8;
+
+}
+
+.cd::after{
+
+content:"";
+
+position:absolute;
+
+top:-20%;
+left:-40%;
+
+width:70%;
+height:140%;
+
+background:
+rgba(255,255,255,.35);
+
+transform:rotate(25deg);
+
+animation:shine 4s infinite;
+
+}
+
+.trackList{
+
+margin-top:35px;
+
+padding:30px;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(12px);
+
+border-radius:25px;
+
+box-shadow:
+0 15px 35px rgba(255,180,210,.2);
+
+max-width:500px;
+
+}
+
+.trackList h3{
+
+font-family:'Dancing Script';
+
+font-size:42px;
+
+color:#ff8db4;
+
+margin-bottom:20px;
+
+}
+
+.trackList ol{
+
+padding-left:25px;
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+.spotifyButton{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:18px 40px;
+
+background:#1DB954;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:
+0 12px 30px rgba(29,185,84,.3);
+
+}
+
+.spotifyButton:hover{
+
+transform:
+translateY(-5px)
+scale(1.05);
+
+}
+
+/* ==========================
+JAPANESE GARDEN
+========================== */
+
+.gardenCard{
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(15px);
+
+padding:45px;
+
+border-radius:35px;
+
+max-width:750px;
+
+text-align:center;
+
+box-shadow:
+0 18px 40px rgba(255,180,210,.2);
+
+}
+
+.gardenCard h1{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.gardenCard p{
+
+font-size:24px;
+
+line-height:2;
+
+font-family:'Patrick Hand',cursive;
+
+}
+
+.lantern,
+.windchime,
+.crane{
+
+font-size:45px;
+
+display:inline-block;
+
+margin:10px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+/* ==========================
+FINAL SECTION
+========================== */
+
+.finalCard,
+.secretCard{
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(15px);
+
+padding:50px;
+
+border-radius:35px;
+
+max-width:750px;
+
+box-shadow:
+0 20px 45px rgba(255,180,210,.22);
+
+text-align:center;
+
+}
+
+.finalCard h1{
+
+font-size:65px;
+
+font-family:'Dancing Script';
+
+color:#ff8db4;
+
+margin-bottom:15px;
+
+}
+
+.finalCard h2{
+
+font-size:40px;
+
+margin-bottom:25px;
+
+}
+
+.finalCard p,
+.secretCard p{
+
+font-size:22px;
+
+line-height:2;
+
+font-family:'Patrick Hand',cursive;
+
+}
+
+#lastButton{
+
+margin-top:40px;
+
+}
+
+.secretCard h2{
+
+font-family:'Dancing Script';
+
+font-size:48px;
+
+color:#ff8db4;
+
+margin-bottom:20px;
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+
+padding:40px 20px;
+
+text-align:center;
+
+font-size:15px;
+
+color:#888;
+
+}
+/* ==========================
+ANIMATIONS
+========================== */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes spin{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes shine{
+
+0%{
+left:-70%;
+}
+
+100%{
+left:130%;
+}
+
+}
+
+@keyframes cloudMove{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(calc(100vw + 500px));
+}
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.3);
+}
+
+100%{
+opacity:.2;
+transform:scale(.8);
+}
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-120px)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(110vh)
+translateX(120px)
+rotate(360deg);
+
+opacity:.2;
+
+}
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(100vh)
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+
+transform:
+translateY(-120px)
+scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:
+0 0 5px #fff8b5;
+
+}
+
+100%{
+
+box-shadow:
+0 0 30px #fff6a5,
+0 0 60px #fff4a0;
+
+}
+
+}
+
+/* ==========================
+SPARKLES
+========================== */
+
+.sparkle{
+
+position:fixed;
+
+width:8px;
+height:8px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px white,
+0 0 20px #ffd6e8;
+
+pointer-events:none;
+
+animation:twinkle 3s infinite;
+
+z-index:2;
+
+}
+
+.petal{
+
+position:fixed;
+
+width:16px;
+height:16px;
+
+background:#ffd9e8;
+
+border-radius:60% 40% 60% 40%;
+
+pointer-events:none;
+
+animation:petalFall linear infinite;
+
+z-index:2;
+
+}
+
+.heart{
+
+position:fixed;
+
+font-size:18px;
+
+pointer-events:none;
+
+animation:heartFloat linear infinite;
+
+z-index:2;
+
+opacity:.8;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.glass-card,
+.finalCard,
+.secretCard,
+.gardenCard{
+
+width:92%;
+
+padding:30px;
+
+}
+
+.glass-card h1{
+
+font-size:42px;
+
+}
+
+.subtitle{
+
+font-size:17px;
+
+}
+
+.giftContainer{
+
+gap:20px;
+
+}
+
+.giftBox{
+
+width:100px;
+height:100px;
+
+}
+
+.cd{
+
+width:190px;
+height:190px;
+
+}
+
+.trackList{
+
+padding:20px;
+
+}
+
+.trackList h3{
+
+font-size:32px;
+
+}
+
+.finalCard h1{
+
+font-size:46px;
+
+}
+
+.finalCard h2{
+
+font-size:30px;
+
+}
+
+.finalCard p,
+.secretCard p,
+.gardenCard p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+button,
+.spotifyButton{
+
+padding:14px 28px;
+
+font-size:16px;
+
+}
+
+footer{
+
+font-size:13px;
+
+}
+
+}
