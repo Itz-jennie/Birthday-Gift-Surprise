@@ -80,14 +80,12 @@ const message=
 
 `Happy Birthday, Kaku 🤍
 
-I just wanted to make something that could make you smile today.
+I just wanted to make something that could make you smile.
 
-Thank you for being the amazing person you are.
+Thank you for being the way you are.
 
-I hope this little gift reminds you how appreciated you are.
-
-Enjoy every little surprise waiting ahead.
-
+I hope you liked this little gift I made you.
+I LOVE YOU MORE THAN YOU AND YOU WILL NEVER WIN THIS DEBATE! 😝
 🌸`;
 
 let i=0;
@@ -137,7 +135,7 @@ text:`• Your smile
 
 • The way you care about people
 
-• Simply... you.`
+• YOU! 💝`
 
 },
 
@@ -145,12 +143,11 @@ text:`• Your smile
 
 title:"🌸 Little Memories",
 
-text:`Every conversation,
-every laugh,
+text:`Every little conversation we have secretly,
 every little moment...
 
-They're all memories
-I'll always treasure.`
+They're all memories,
+that 'll never forget 😌`
 
 },
 
@@ -158,19 +155,16 @@ I'll always treasure.`
 
 title:"✨ Birthday Wish",
 
-text:`I hope this year brings you
+text:`I hope you 
 
-🤍 Happiness
+🤍 Always Be Happy 
 
-🌸 Peace
+🌸 Get The Peace You Deserve 
 
-✨ Success
+✨ Be Successful 
 
-🎂 Lots of cake
-
-🇯🇵 And maybe...
-
-Japan someday.`
+🇯🇵 And...
+Also get to go to Japan someday.`
 
 }
 
@@ -438,4 +432,4 @@ attributeFilter:["class"]
 THE END
 ========================== */
 
-console.log("🌸 A Gift Wrapped in Sakura loaded successfully!");
+console.log("🌸 Loaded Successfully!");
